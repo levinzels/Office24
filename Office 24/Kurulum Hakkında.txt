@@ -1,0 +1,85 @@
+-----------------------------------------------------------------------------------------------------------------------
+
+(https://www.microsoft.com/en-ph/download/details.aspx?id=49117)
+
+(https://learn.microsoft.com/en-gb/deployoffice/preview-ltsc2024/install-ltsc-preview)
+
+------------------------------------------------------------------------------------------------------------------------
+
+Office Deployment Tool'u İndirin. (Office2024 adlı klasörün içinde yer almaktadır "officedeploymenttool_17531-20046")
+
+Masaüstünde Office / Office24 Olarak Bir Klasör Oluşturun.
+
+Daha Sonra İndirmiş Olduğumuz Office Deployment Tool'u Yönetici Olarak Çalıştırın Ve Karşınıza Gelen Ekrandan Masaüstünü Seçip Office / Office24 Olarak
+Oluşturduğunuz Klasörü Seçin "Files extraced sussessfully." Yazısını Gördükten Sonra Masaüstünde Oluşturulmuş Olan Klasörü Açın.
+
+Ardından 
+
+configuration-Office2019Enterprise
+configuration-Office365-x86
+configuration-Office365-x64
+
+Adlı Dosyaları Silin
+
+configuration-Office2021Enterprise Adlı Dosyayı Not Defreti İle Birlikte Açın
+
+İçinde Yazan Bütün Kodları Silin Ve Şunu Yapıştırın.
+
+
+
+<Configuration>
+  <Add OfficeClientEdition="64"  Channel="PerpetualVL2024">
+     <Product ID="ProPlus2024Volume" PIDKEY="2TDPW-NDQ7G-FMG99-DXQ7M-TX3T2" >
+         <Language ID="tr-tr" />
+    </Product>
+  </Add>
+  <RemoveMSI />
+  <Property Name="AUTOACTIVATE" Value="1" />
+</Configuration>
+
+
+
+Sonrasında Aynı Klasör İçinde Farklı Kaydet'i Seçin Ve Dosyanın İsmini "configuration.xml" Olarak Kayıt Edin Ve Tamam'a Basın.
+
+
+Daha Sonrasında configuration-Office2021Enterprise Adlı Dosyayı Silin Ve Klasörü Kapatın.
+
+Ardından Klasörü Kopyalayın Ve Bu bilgisayar > C:\ Dizinine Klasörü Yapıştırın Klasörü Açın Ve Yapıştırdığınız Yerdeki Dosya Yolunu Kopyalayın Örneğin C:\Office24
+
+Ve Komut İstemi'ni Yönetici Olarak Çalıştırın Ardından ;
+
+cd C:\Office24 (Kendi Kopyaladığınız Dosya Yolunu Yazın)
+
+Ardından 
+
+setup.exe /configure configuration.xml
+
+Yazın Ve Enter'e Basın.
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+Lisans Anahtarı / Lisans Anahtarı Değiştirme İsteniyorsa ;
+
+Office Kurulduktan Sonra Word'u Açın Dosya > Hesap > Ürün Anahtarını Değiştir = Y63J7-9RNDJ-GD3BV-BDKBP-HH966
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
